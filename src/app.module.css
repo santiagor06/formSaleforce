@@ -3,13 +3,21 @@ justify-content: center;
 align-items: center;
 }
 .container{
-    background-color: aqua;
-    width: 50vh;
-  
+    background-color: rgb(246, 246, 246);
+    width: 75vh;
+    border-radius: 15px;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 2.5%;
+
 }
 .banner{
-    width: 100vw;
-    height: 40vh;
+    width: 80vw;
+    height: 25vh;
+    border-radius: 15px;
+    margin-top: 2.5%;
 }
 .main{display: flex;
-justify-content: center;}
+    flex-direction: column;
+justify-content: center;
+align-items: center;}

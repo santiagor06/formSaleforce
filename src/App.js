@@ -9,19 +9,16 @@ import Image from "react-bootstrap/Image";
 
 function App() {
   return (
-    <div>
+    <div className={style.main}>
       <Image className={style.banner} src={image} alt="banner" />
       <div className={style.container}>
-        <h2 class="h1-responsive font-weight-bold text-center my-4">
-          Contact us
-        </h2>
         <Form
           action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
           method="POST"
         >
           <Row>
             <Col>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3">
                 <Form.Label>Nombre del contacto</Form.Label>
                 <Form.Control
                   id="name"
@@ -38,7 +35,6 @@ function App() {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Direccion de email</Form.Label>
                 <Form.Control
-                  id="email"
                   maxlength="80"
                   name="email"
                   size="20"
@@ -49,19 +45,27 @@ function App() {
             </Col>
           </Row>
           <input type="hidden" name="orgid" value="00DDn00000A9xuh" />
-          <input type="hidden" name="retURL" value="http://localhost:3000/" />
+
           <Row>
             <Col>
               <Form.Group>
                 <Form.Label>Categoria</Form.Label>
-                <Form.Select aria-label="Default select example">
+                <Form.Select
+                  name="recordType"
+                  aria-label="Default select example"
+                >
                   <option value="012Dn000000ZZpy">General Inquiries</option>
                   <option value="012Dn000000ZZuf">Human Resources</option>
+                  <option value="012Dn000000Za8z">Legal</option>
+                  <option value="012Dn000000Za8p">
+                    Sponsorship- Partnership
+                  </option>
+                  <option value="012Dn000000Za8u">Administration</option>
                 </Form.Select>
               </Form.Group>
             </Col>
             <Col>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3">
                 <Form.Label>Telefono</Form.Label>
                 <Form.Control
                   for="phone"
@@ -75,7 +79,7 @@ function App() {
               </Form.Group>
             </Col>
           </Row>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3">
             <Form.Label>Asunto</Form.Label>
             <Form.Control
               for="phone"
@@ -84,7 +88,6 @@ function App() {
               name="subject"
               size="20"
               type="text"
-              placeholder="ingresa un #"
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
