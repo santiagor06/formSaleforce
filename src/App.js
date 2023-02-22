@@ -13,7 +13,7 @@ function App() {
       <Image className={style.banner} src={image} alt="banner" />
       <div className={style.container}>
         <Form
-          action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+          action="https://awaq--catalyst1.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
           method="POST"
         >
           <Row>
@@ -44,23 +44,20 @@ function App() {
               </Form.Group>
             </Col>
           </Row>
-          <input type="hidden" name="orgid" value="00DDn00000A9xuh" />
+          <input type="hidden" name="orgid" value="00D3M0000008p4r" />
 
           <Row>
             <Col>
               <Form.Group>
                 <Form.Label>Categoria</Form.Label>
-                <Form.Select
-                  name="recordType"
-                  aria-label="Default select example"
-                >
-                  <option value="012Dn000000ZZpy">General Inquiries</option>
-                  <option value="012Dn000000ZZuf">Human Resources</option>
-                  <option value="012Dn000000Za8z">Legal</option>
-                  <option value="012Dn000000Za8p">
-                    Sponsorship- Partnership
+                <Form.Select name="type" aria-label="Default select example">
+                  <option value="General Inquires">General Inquires</option>
+                  <option value="Human Resources">Human Resources</option>
+                  <option value="Sponsorship-Partnership">
+                    Sponsorship-Partnership
                   </option>
-                  <option value="012Dn000000Za8u">Administration</option>
+                  <option value="Administration">Administration</option>
+                  <option value="Legal">Legal</option>
                 </Form.Select>
               </Form.Group>
             </Col>
